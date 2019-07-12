@@ -1,0 +1,18 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/myLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:cardCornerRadius="4dp">
+        <CalendarView
+            android:id="@+id/calendarID"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:maxDate="07/31/2019"
+            android:minDate="06/01/2019"
+            android:showWeekNumber="false"
+            android:tag="my tag"
+            android:theme="@style/AppTheme"/>
+
+</LinearLayout>

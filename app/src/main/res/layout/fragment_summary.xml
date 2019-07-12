@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SummaryActivityFragment">
+
+
+    <TextView
+        android:id="@+id/pickYourPeak"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/robotothin"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:textSize="24sp"
+        android:text="@string/pyp" />
+
+    <TextView
+        android:id="@+id/pypMountain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:fontFamily="@font/oswald"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="45dp"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/mount_everest_nm"/>
+
+    <ImageView
+        android:id="@+id/imageViewMountain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/image_desc_summary"
+        android:scaleType="fitStart"
+        android:src="@drawable/ic_mount_bg_summary"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineSummary"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/overallProgressBar"
+        android:layout_width="336dp"
+        android:layout_height="6dp"
+        style="?android:progressBarStyleHorizontal"
+        android:progressDrawable="@drawable/gradient_progress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineSummary"
+        android:layout_marginBottom="127dp"
+        android:layout_marginEnd="107dp"
+        android:progressBackgroundTint="@color/transparent"
+        android:rotation="-47.25"
+        android:progress="100" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guidelineSummary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" />
+
+
+<!-- LEFT SIDE
+    <TextView
+        android:id="@+id/weekOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guidelineSummary"
+        android:text="@string/week_one" />
+
+    <TextView
+        android:id="@+id/weekTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/weekOne"
+        android:text="@string/week_two" />
+
+    <TextView
+        android:id="@+id/weekThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/weekTwo"
+        android:text="@string/week_three" />
+
+    <TextView
+        android:id="@+id/weekFour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/weekThree"
+        android:text="@string/week_four" />
+    -->
+
+<!-- RIGHT SIDE
+    <TextView
+        android:id="@+id/weekOneTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guidelineSummary"/>
+
+    <TextView
+        android:id="@+id/weekTwoTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/weekOneTotal"/>
+
+    <TextView
+        android:id="@+id/weekThreeTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/weekTwoTotal"/>
+    <TextView
+        android:id="@+id/weekFourTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/weekThreeTotal"/>
+    -->
+
+<!-- MOUNTAINS -->
+    <ImageView
+        android:id="@+id/startDot"
+        android:visibility="visible"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="4dp"
+        android:src="@drawable/ic_dot"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineSummary"
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/general_desc"/>
+
+    <ImageView
+        android:id="@+id/diamondHead"
+        android:visibility="invisible"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginBottom="12dp"
+        android:src="@drawable/ic_dot"
+        android:tint="#E46542"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineSummary"
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/general_desc"/>
+
+    <ImageView
+        android:id="@+id/burnabyMountain"
+        android:visibility="invisible"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginBottom="14dp"
+        android:src="@drawable/ic_dot"
+        android:tint="#E46642"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineSummary"
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/general_desc"/>
+
+    <ImageView
+        android:id="@+id/stawamusChief"
+        android:visibility="invisible"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="35.5dp"
+        android:layout_marginBottom="21.5dp"
+        android:src="@drawable/ic_dot"
+        android:tint="#E56840"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineSummary"
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/general_desc"/>
+
+    <ImageView
+        android:id="@+id/tableMountain"
+        android:visibility="invisible"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="47.5dp"
+        android:layout_marginBottom="34dp"
+        android:src="@drawable/ic_dot"
+        android:tint="#E6693E"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineSummary"
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/general_desc"/>
+
+    <ImageView
+        android:id="@+id/grouseMountain"
+        android:visibility="invisible"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="50.5dp"
+        android:layout_marginBottom="37.5dp"
+        android:src="@drawable/ic_dot"
+        android:tint="#E66A3D"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineSummary"
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/general_desc"/>
+
+    <ImageView
+        android:id="@+id/cypressBowl"
+        android:visibility="invisible"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginBottom="42.5dp"
+        android:src="@drawable/ic_dot"
+        android:tint="#E76C3A"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineSummary"
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/general_desc"/>
+
+    <ImageView
+        android:id="@+id/mountOlympus"
+        android:visibility="invisible"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginBottom="56.5dp"
+        android:src="@drawable/ic_dot"
+        android:tint="#E96F36"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineSummary"
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/general_desc"/>
+
+    <ImageView
+        android:id="@+id/mountStHelens"
+        android:visibility="invisible"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="85.5dp"
+        android:layout_marginBottom="75.5dp"
+        android:src="@drawable/ic_dot"
+        android:tint="#EB7232"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineSummary"
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/general_desc"/>
+
+    <ImageView
+        android:id="@+id/mountFuji"
+        android:visibility="invisible"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="117dp"
+        android:layout_marginBottom="109dp"
+        android:src="@drawable/ic_dot"
+        android:tint="#EE7929"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineSummary"
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/general_desc"/>
+
+    <ImageView
+        android:id="@+id/mountKilimanjaro"
+        android:visibility="invisible"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="172.5dp"
+        android:layout_marginBottom="169dp"
+        android:src="@drawable/ic_dot"
+        android:tint="#F48618"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineSummary"
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@string/general_desc"/>
+
+    <ImageView
+        android:id="@+id/mountEverest"
+        android:visibility="invisible"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="247dp"
+        android:layout_marginBottom="250dp"
+        android:src="@drawable/ic_dot"
+        android:tint="#FD9603"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineSummary"
+        app:layout_constraintStart_toStartOf="parent" />
+
+<!-- EVEREST MOUNTAIN TEXT -->
+    <TextView
+        android:id="@+id/textDiamondHead"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/diamondHead"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineSummary"
+        android:paddingLeft="8dp"
+        android:fontFamily="@font/robotolight"
+        android:layout_marginBottom="8dp"
+        android:text="@string/diamond_head"/>
+
+    <TextView
+        android:id="@+id/textBurnabyMountain"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/burnabyMountain"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineSummary"
+        android:paddingLeft="8dp"
+        android:fontFamily="@font/robotolight"
+        android:layout_marginBottom="11dp"
+        android:text="@string/burnaby_mountain"/>
+
+    <TextView
+        android:id="@+id/textStawamusChief"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/stawamusChief"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineSummary"
+        android:paddingLeft="8dp"
+        android:fontFamily="@font/robotolight"
+        android:layout_marginBottom="18.5dp"
+        android:text="@string/stawamus_chief"/>
+
+    <TextView
+        android:id="@+id/textTableMountain"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/tableMountain"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineSummary"
+        android:paddingLeft="8dp"
+        android:fontFamily="@font/robotolight"
+        android:layout_marginBottom="27dp"
+        android:text="@string/table_mountain"/>
+
+    <TextView
+        android:id="@+id/textGrouseMountain"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/grouseMountain"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineSummary"
+        android:paddingLeft="8dp"
+        android:fontFamily="@font/robotolight"
+        android:layout_marginBottom="30.5dp"
+        android:text="@string/grouse_mountain"/>
+
+    <TextView
+        android:id="@+id/textCypressBowl"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/cypressBowl"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineSummary"
+        android:paddingLeft="8dp"
+        android:fontFamily="@font/robotolight"
+        android:layout_marginBottom="40dp"
+        android:text="@string/cypress_bowl"/>
+
+    <TextView
+        android:id="@+id/textMountOlympus"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/mountOlympus"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineSummary"
+        android:paddingLeft="8dp"
+        android:fontFamily="@font/robotolight"
+        android:layout_marginBottom="53.5dp"
+        android:text="@string/mount_olympus"/>
+
+    <TextView
+        android:id="@+id/textMountStHelens"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/mountStHelens"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineSummary"
+        android:paddingLeft="8dp"
+        android:fontFamily="@font/robotolight"
+        android:layout_marginBottom="69dp"
+        android:text="@string/mount_st_helens"/>
+
+    <TextView
+        android:id="@+id/textMountFuji"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/mountFuji"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineSummary"
+        android:paddingLeft="8dp"
+        android:fontFamily="@font/robotolight"
+        android:layout_marginBottom="102dp"
+        android:text="@string/mount_fuji"/>
+
+    <TextView
+        android:id="@+id/textMountKilimanjaro"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/mountKilimanjaro"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineSummary"
+        android:paddingLeft="8dp"
+        android:fontFamily="@font/robotolight"
+        android:layout_marginBottom="162dp"
+        android:text="@string/mount_kilimanjaro"/>
+
+    <TextView
+        android:id="@+id/textMountEverest"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/mountEverest"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineSummary"
+        android:paddingLeft="8dp"
+        android:fontFamily="@font/robotolight"
+        android:layout_marginBottom="243dp"
+        android:text="@string/mount_everest"/>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/weekOneCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="#bae2e2"
+        app:cardCornerRadius="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guidelineSummary">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp">
+
+            <TextView
+                android:id="@+id/metresHeader"
+                android:layout_marginBottom="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/robotolight"
+                android:text="Metres"
+                android:textColor="@color/mainText"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/totalsHeader"
+                android:layout_marginBottom="2dp"
+                android:paddingRight="120dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/robotolight"
+                android:textSize="16sp"
+                android:text="Flights"
+                android:textColor="@color/mainText" />
+
+<!-- WEEK ONE -->
+            <TextView
+                android:id="@+id/weekOne"
+                android:layout_marginBottom="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/metresHeader"
+                android:text="@string/week_one"
+                android:textSize="16sp"
+                android:fontFamily="@font/robotolight"
+                android:textColor="@color/mainText" />
+
+            <TextView
+                android:id="@+id/weekOneMeters"
+                android:layout_marginBottom="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/metresHeader"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/robotolight"
+                android:text="metres 1"
+                android:textColor="@color/mainText"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/weekOneTotal"
+                android:layout_marginBottom="2dp"
+                android:paddingRight="120dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/metresHeader"
+                android:fontFamily="@font/robotolight"
+                android:textSize="16sp"
+                android:text="flights 1"
+                android:textColor="@color/mainText" />
+
+<!-- WEEK TWO -->
+            <TextView
+                android:id="@+id/weekTwo"
+                android:layout_marginBottom="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="@string/week_two"
+                android:textColor="@color/mainText"
+                android:fontFamily="@font/robotolight"
+                android:textSize="16sp"
+                android:layout_below="@id/weekOne"/>
+
+            <TextView
+                android:id="@+id/weekTwoMeters"
+                android:layout_marginBottom="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/weekOneMeters"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/robotolight"
+                android:text="metres 2"
+                android:textColor="@color/mainText"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/weekTwoTotal"
+                android:layout_marginBottom="2dp"
+                android:paddingRight="120dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/mainText"
+                android:fontFamily="@font/robotolight"
+                android:textSize="16sp"
+                android:text="flights 2"
+                android:layout_below="@id/weekOneTotal"/>
+
+<!-- WEEK THREE -->
+            <TextView
+                android:id="@+id/weekThree"
+                android:layout_marginBottom="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="@string/week_three"
+                android:textColor="@color/mainText"
+                android:fontFamily="@font/robotolight"
+                android:textSize="16sp"
+                android:layout_below="@id/weekTwo"/>
+
+            <TextView
+                android:id="@+id/weekThreeMeters"
+                android:layout_marginBottom="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/weekTwoMeters"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/robotolight"
+                android:text="metres 3"
+                android:textColor="@color/mainText"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/weekThreeTotal"
+                android:layout_marginBottom="2dp"
+                android:paddingRight="120dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/mainText"
+                android:fontFamily="@font/robotolight"
+                android:textSize="16sp"
+                android:text="flights 3"
+                android:layout_below="@id/weekTwoTotal"/>
+
+<!-- WEEK FOUR -->
+            <TextView
+                android:id="@+id/weekFour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="@string/week_four"
+                android:textColor="@color/mainText"
+                android:fontFamily="@font/robotolight"
+                android:textSize="16sp"
+                android:layout_below="@id/weekThree"/>
+
+            <TextView
+                android:id="@+id/weekFourMeters"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/weekThreeMeters"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/robotolight"
+                android:text="metres 4"
+                android:textColor="@color/mainText"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/weekFourTotal"
+                android:paddingRight="120dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:fontFamily="@font/robotolight"
+                android:textSize="16sp"
+                android:text="flights 4"
+                android:textColor="@color/mainText"
+                android:layout_below="@id/weekThreeTotal"/>
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/challengeTotalTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/mainText"
+        android:textSize="20sp"
+        android:fontFamily="@font/robotolight"
+        app:layout_constraintTop_toBottomOf="@+id/weekOneCard"
+        android:text="@string/challenge_total_text"/>
+
+    <TextView
+        android:id="@+id/challengeTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/challengeTotalTitle"
+        android:text="Test"
+        android:fontFamily="@font/robotolight"
+        android:textSize="25sp"
+        android:textColor="@color/colorPrimary"/>
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    android:layout_marginBottom="10dp">
+
+    <TextView
+        android:id="@+id/dailyGoal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:fontFamily="@font/robotolight"
+        android:text="Daily goal" />
+
+    <ImageView
+        android:id="@+id/dailyGoalButton"
+        android:layout_width="22dp"
+        android:layout_height="32dp"
+        android:layout_marginLeft="4dp"
+        android:src="@drawable/ic_edit_orange" />
+
+</LinearLayout>
+
+    <ImageView
+        android:id="@+id/selectMountain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:src="@drawable/ic_settings"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineSummary"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

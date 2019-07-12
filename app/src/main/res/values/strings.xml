@@ -1,0 +1,69 @@
+<resources>
+    <string name="app_name">PYP 2019</string>
+
+    <string name="input_title">Add those steps!</string>
+    <string name="edit_title">How many stairs did you really climb?</string>
+    <string name="image_desc">Mountain triangles.</string>
+    <string name="image_map_desc">Mountain triangles.</string>
+    <string name="image_desc_summary">Mountain triangles again</string>
+    <string name="daily_step_goal">Daily step goal.</string>
+
+    <string name="edit_daily_title">Set a new goal:</string>
+
+    <string name="pyp">PICK YOUR PEAK</string>
+    <string name="pyp_normal">Pick your peak:</string>
+
+    <string name="daily_total">Today</string>
+    <string name="challenge_total_text">Challenge Total</string>
+
+    <string name="total">%1$s</string>
+    <string name="default_total">0.0</string>
+    <string name="flights">flights</string>
+
+    <string name="menu_edit">Edit</string>
+    <string name="menu_delete">Remove</string>
+
+    <string name="week_one">Week 1</string>
+    <string name="week_two">Week 2</string>
+    <string name="week_three">Week 3</string>
+    <string name="week_four">Week 4</string>
+
+    <string name="diamond_head">Diamond Head (232m)</string>
+    <string name="burnaby_mountain">Burnaby Mountain (370m)</string>
+    <string name="stawamus_chief">Stawamus Chief (700m)</string>
+    <string name="table_mountain">Table Mountain (1085m)</string>
+    <string name="grouse_mountain">Grouse Mountain (1231m)</string>
+    <string name="cypress_bowl">Cypress Bowl (1432m)</string>
+    <string name="mount_olympus">Mt. Olympus (1950m)</string>
+    <string name="mount_st_helens">Mount St. Helens (2550m)</string>
+    <string name="mount_fuji">Mt. Fuji (3776m)</string>
+    <string name="mount_kilimanjaro">Mt. Kilimanjaro (5895m)</string>
+    <string name="mount_everest">Mt. Everest (8848m)</string>
+
+    <string name="diamond_head_radio">Diamond Head (232m)</string>
+    <string name="burnaby_mountain_radio">Burnaby Mountain (370m)</string>
+    <string name="stawamus_chief_radio">Stawamus Chief (700m)</string>
+    <string name="table_mountain_radio">Table Mountain (1085m)</string>
+    <string name="grouse_mountain_radio">Grouse Mountain (1231m)</string>
+    <string name="cypress_bowl_radio">Cypress Bowl (1432m)</string>
+    <string name="mount_olympus_radio">Mount Olympus (1950m)</string>
+    <string name="mount_st_helens_radiol">Mount St. Helens (2550m)</string>
+    <string name="mount_fuji_radio">Mount Fuji (3776m)</string>
+    <string name="mount_kilimanjaro_radio">Mount Kilimanjaro (5895m)</string>
+    <string name="mount_everest_radio">Mount Everest (8848m)</string>
+
+    <string name="diamond_head_nm">DIAMOND HEAD</string>
+    <string name="burnaby_mountain_nm">BURNABY MOUNTAIN</string>
+    <string name="stawamus_chief_nm">STAWAMUS CHIEF</string>
+    <string name="table_mountain_nm">TABLE MOUNTAIN</string>
+    <string name="grouse_mountain_nm">GROUSE MOUNTAIN</string>
+    <string name="cypress_bowl_nm">CYPRESS BOWL</string>
+    <string name="mount_olympus_nm">MOUNT OLYMPUS </string>
+    <string name="mount_st_helens_nm">MOUNT ST. HELENS</string>
+    <string name="mount_fuji_nm">MOUNT FUJI</string>
+    <string name="mount_kilimanjaro_nm">MOUNT KILIMANJARO</string>
+    <string name="mount_everest_nm">MOUNT EVEREST</string>
+
+    <string name="general_desc">Mountain display element.</string>
+
+</resources>

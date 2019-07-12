@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/pyp_radio_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pyp_normal"
+        android:textSize="16sp"
+        android:fontFamily="@font/robotolight"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <RadioGroup
+        android:id="@+id/mountain_radio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintTop_toBottomOf="@id/pyp_radio_title"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/radioDiamondHead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/robotolight"
+            android:text="@string/diamond_head_radio"/>
+
+        <RadioButton
+            android:id="@+id/radioBurnabyMountain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/robotolight"
+            android:text="@string/burnaby_mountain_radio"/>
+
+        <RadioButton
+            android:id="@+id/radioStawamusChief"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/robotolight"
+            android:text="@string/stawamus_chief_radio"/>
+
+        <RadioButton
+            android:id="@+id/radioTableMountain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/robotolight"
+            android:text="@string/table_mountain_radio"/>
+
+        <RadioButton
+            android:id="@+id/radioGrouseMountain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/robotolight"
+            android:text="@string/grouse_mountain_radio"/>
+
+        <RadioButton
+            android:id="@+id/radioCypressBowl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/robotolight"
+            android:text="@string/cypress_bowl_radio"/>
+
+        <RadioButton
+            android:id="@+id/radioMountOlympus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/robotolight"
+            android:text="@string/mount_olympus_radio"/>
+
+        <RadioButton
+            android:id="@+id/radioMountStHelens"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/robotolight"
+            android:text="@string/mount_st_helens_radiol"/>
+
+        <RadioButton
+            android:id="@+id/radioMountFuji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/robotolight"
+            android:text="@string/mount_fuji_radio"/>
+
+        <RadioButton
+            android:id="@+id/radioMountKilimanjaro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/robotolight"
+            android:text="@string/mount_kilimanjaro_radio"/>
+
+        <RadioButton
+            android:id="@+id/radioMountEverest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/robotolight"
+            android:text="@string/mount_everest_radio"/>
+
+
+
+    </RadioGroup>
+
+</LinearLayout>
